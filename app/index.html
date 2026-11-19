@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide &amp; tracker</p>
+    <h1>Leonida Platinum</h1>
+    <p class="subtitle">Every one of the 55 official trophies — name, description and grade as PlayStation publishes them — with a guide in our own words, a roadmap to the platinum, and a tracker that saves your progress in this browser.</p>
+    <div class="counts" id="counts" aria-live="polite"></div>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text" id="progressText">0 of 55 earned</p>
+    </div>
+    <nav class="tabs" aria-label="Guide sections">
+      <button type="button" data-view="checklist" class="tab active">Checklist</button>
+      <button type="button" data-view="roadmap" class="tab">Roadmap</button>
+      <button type="button" data-view="missables" class="tab">Missables</button>
+      <button type="button" data-view="planner" class="tab">Next up</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="toolbar">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or word…" autocomplete="off"></label>
+      <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+        <button type="button" data-kind="all" class="chip active">All 55</button>
+        <button type="button" data-kind="story" class="chip">Story</button>
+        <button type="button" data-kind="missable" class="chip">Missable</button>
+        <button type="button" data-kind="collectible" class="chip">Collectibles</button>
+        <button type="button" data-kind="activity" class="chip">Activities</button>
+        <button type="button" data-kind="online" class="chip">Online</button>
+      </div>
+      <label class="grade-label">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input id="spoiler" type="checkbox" checked> Spoiler-free story trophies</label>
+      <label class="toggle"><input id="hideEarned" type="checkbox"> Hide earned</label>
+    </div>
+
+    <div class="layout">
+      <div class="list-col">
+        <p class="list-meta" id="listMeta"></p>
+        <ol class="trophy-list" id="trophyList"></ol>
+        <p class="empty-note" id="emptyNote" hidden></p>
+      </div>
+      <aside class="detail-col" id="detailPane" aria-label="Trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-intro">Built from the official descriptions alone: which story chapters and missions, which collectibles and counts, in what order. Five stages, in the order you should play them.</p>
+    <ol class="roadmap" id="roadmapList"></ol>
+    <h3>Progress by stage</h3>
+    <div class="stage-bars" id="stageBars"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2>Missable trophies — 20 to watch</h2>
+    <p class="section-intro" id="missableNote"></p>
+    <ol class="trophy-list" id="missableList"></ol>
+  </section>
+
+  <section id="view-planner" class="view" hidden>
+    <h2>Next up — your planner</h2>
+    <p class="section-intro">The easiest unearned trophies first, in roadmap order. Tick one off and the next one moves up. Story trophies stay hidden here while spoiler-free mode is on — turn it off in the Checklist tab to plan them.</p>
+    <ol class="trophy-list" id="plannerList"></ol>
+    <h3>Progress by kind</h3>
+    <div class="stage-bars" id="kindBars"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="save-row">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset progress</button>
+    <span class="save-note">Progress saves in this browser (localStorage). Export keeps a backup file you can import back.</span>
+  </div>
+  <p class="sources-note" id="sourcesNote"></p>
+  <p class="honesty-note">Difficulty and time are our estimates, not official figures. Where an official description names no place, person or method, the guide says so plainly instead of inventing one. Guide written 19 November 2026, the day GTA VI released. No Rockstar artwork is used anywhere in this guide; the look is our own.</p>
+  <p class="offline-note">Works offline: every file this page loads lives in its own folder, and it makes no network request.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
