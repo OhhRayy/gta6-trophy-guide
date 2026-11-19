@@ -27,33 +27,33 @@ export function loadSavedProgress() {
   }
 }
 
-export function saveProgress(state) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+export function saveProgress(progress) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
 }
 
-export function toggleEarned(state, trophyName) {
-  const earned = new Set(state.earned);
+export function toggleEarned(progress, trophyName) {
+  const earned = new Set(progress.earned);
   if (earned.has(trophyName)) earned.delete(trophyName);
   else earned.add(trophyName);
-  state.earned = [...earned];
-  saveProgress(state);
-  return state;
+  progress.earned = [...earned];
+  saveProgress(progress);
+  return progress;
 }
 
-export function setCounter(state, trophyId, value) {
+export function setCounter(progress, trophyId, value) {
   const n = Math.max(0, Math.floor(Number(value) || 0));
-  state.counts[String(trophyId)] = n;
-  saveProgress(state);
+  progress.counts[String(trophyId)] = n;
+  saveProgress(progress);
   return n;
 }
 
-export function setNote(state, trophyId, text) {
-  state.notes[String(trophyId)] = String(text);
-  saveProgress(state);
+export function setNote(progress, trophyId, text) {
+  progress.notes[String(trophyId)] = String(text);
+  saveProgress(progress);
 }
 
-export function exportProgressFile(state) {
-  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+export function exportProgressFile(progress) {
+  const blob = new Blob([JSON.stringify(progress, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;

@@ -25,8 +25,8 @@ export function trophyMatches(trophy, filters, earnedSet) {
   if (filters.grade !== 'all' && trophy.grade !== filters.grade) return false;
   if (filters.hideEarned && earnedSet.has(trophy.name)) return false;
   if (filters.query) {
-    const haystack = `${trophy.name} ${trophy.description} ${trophy.guide}`.toLowerCase();
-    if (!haystack.includes(filters.query.toLowerCase())) return false;
+    const searchable = `${trophy.name} ${trophy.description} ${trophy.guide}`.toLowerCase();
+    if (!searchable.includes(filters.query.toLowerCase())) return false;
   }
   return true;
 }

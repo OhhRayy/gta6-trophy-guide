@@ -1,7 +1,7 @@
-// A tiny static server for app/ (Node 22+, standard library only), so the guide can
-// be run locally without a build step: `node serve.ts` serves app/ on
-// http://localhost:8080 (`--port <n>` for another port). It sends the MIME types a
-// browser needs, refuses any path that escapes app/, and otherwise does nothing
+// A tiny static server for app/ (Node 22+, standard library only), so the guide
+// can be run locally without a build step: `node serve.ts` serves app/ on
+// http://localhost:8080 (`--port <n>` for another port). It sends the MIME types
+// a browser needs, refuses any path that escapes app/, and otherwise does nothing
 // clever: this is a development convenience, not a server for the internet.
 import { createReadStream, statSync } from 'node:fs';
 import { createServer } from 'node:http';
@@ -10,11 +10,11 @@ import { fileURLToPath } from 'node:url';
 
 const appRoot = resolve(fileURLToPath(new URL('./app', import.meta.url)));
 const argv = process.argv.slice(2);
-const flagAt = argv.indexOf('--port');
-const wanted = flagAt === -1 ? 8080 : Number(argv[flagAt + 1]);
-const port = Number.isInteger(wanted) && wanted > 0 && wanted < 65536 ? wanted : 8080;
+const portFlag = argv.indexOf('--port');
+const requested = portFlag === -1 ? 8080 : Number(argv[portFlag + 1]);
+const port = Number.isInteger(requested) && requested > 0 && requested < 65536 ? requested : 8080;
 
-const MIME_TYPES = {
+const MIME_BY_EXT = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
   '.mjs': 'text/javascript; charset=utf-8',
@@ -55,7 +55,7 @@ createServer((request, response) => {
     return;
   }
   response.writeHead(200, {
-    'content-type': MIME_TYPES[extname(file).toLowerCase()] ?? 'application/octet-stream',
+    'content-type': MIME_BY_EXT[extname(file).toLowerCase()] ?? 'application/octet-stream',
     'content-length': size,
     'cache-control': 'no-store',
   });

@@ -4,11 +4,11 @@ import { visibleTrophies } from './filters.js';
 import { renderHeaderCounts, renderChecklist, renderGuidePane, renderRoadmap, renderMissables, renderPlanner, renderSourcesNote } from './views.js';
 
 const DATA_URL = 'data/trophies.json';
-const FALLBACK_SELECTED_ID = 17; // The Shootist: a silver with a PSN count, a full guide and sources.
+const DEFAULT_SELECTED_ID = 17; // The Shootist: a silver with a PSN count, a full guide and sources.
 
 const progress = loadSavedProgress();
 const activeFilters = { kind: 'all', grade: 'all', query: '' };
-let selectedId = FALLBACK_SELECTED_ID;
+let selectedId = DEFAULT_SELECTED_ID;
 let guideData = null;
 
 const $ = (id) => document.getElementById(id);

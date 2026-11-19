@@ -8,15 +8,15 @@ An offline, open-source guide and tracker for all **55 PlayStation 5 trophies** 
 Grand Theft Auto VI, built for the
 [make.fun gta6-trophy-guide-01 bounty](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01).
 
-## What it is
+## What is inside
 
-- **Every trophy, official and complete:** all 55 names, descriptions and grades
-  exactly as PlayStation publishes them (1 platinum, 2 gold, 6 silver, 46 bronze),
+- **The full official list:** all 55 names, descriptions and grades exactly as
+  PlayStation publishes them (1 platinum, 2 gold, 6 silver, 46 bronze),
   checked against the
   [Exophase list](https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/)
   and the
   [PSNProfiles list](https://psnprofiles.com/trophies/43531-grand-theft-auto-vi)
-  on 19 November 2026 — the two agree on every name, description and grade.
+  on 19 November 2026 — the two lists agree on every name, description and grade.
 - **A guide for each trophy in our own words**, with its sources named beside it.
   Where an official description names no place, person or method, the guide says
   so plainly instead of inventing one.
