@@ -27,9 +27,9 @@
       "stage": 5,
       "difficulty": 5,
       "time": "60–100+ hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The platinum is the receipt, not a task: it unlocks the moment the other 54 trophies are earned, so there is nothing to do for this one directly. Work the roadmap in order — story, strangers, activities, collectibles, then money and cleanup — and watch the two long grinds, 100% completion and 500 choices, because they decide when this pops. Difficulty and time here are our estimates, not official figures.",
-      "steps": ["Earn the other 54 trophies in any order.", "The platinum unlocks automatically once the last one lands."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Earn the other 54 trophies in any order.", "The platinum unlocks automatically once the last one lands."]
     },
     {
       "id": 2,
@@ -44,9 +44,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Under 30 minutes (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Gone Fishing is the opening mission, so this is the first trophy most players earn: play the mission to its end and the trophy follows the mission-complete screen. It is flagged story-moment because the official description ties it to one mission — earn it while that mission is live and check the in-game mission replay before moving past the opening if you ever miss a story trophy.",
-      "steps": ["Start a new game and play the opening mission, Gone Fishing.", "Finish the mission; the trophy unlocks with it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Start a new game and play the opening mission, Gone Fishing.", "Finish the mission; the trophy unlocks with it."]
     },
     {
       "id": 3,
@@ -61,9 +61,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Finish every mission in Chapter 1 and this unlocks when the chapter closes. Chapters are the spine of the roadmap: nothing here needs grinding, only story progress, so keep playing the main missions and do not worry about side content until the chapter is done.",
-      "steps": ["Play the Chapter 1 story missions in order.", "Complete the chapter's final mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Play the Chapter 1 story missions in order.", "Complete the chapter's final mission."]
     },
     {
       "id": 4,
@@ -78,9 +78,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The Chapter 2 trophy, spelled on PlayStation exactly as shown here. As with every chapter trophy, it is pure story progress: finish the chapter's missions and it unlocks at the chapter's end. No side activity is needed for it.",
-      "steps": ["Play the Chapter 2 story missions in order.", "Complete the chapter's final mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Play the Chapter 2 story missions in order.", "Complete the chapter's final mission."]
     },
     {
       "id": 5,
@@ -95,9 +95,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Finish Chapter 3 and this unlocks with it. By this point in the story the map has opened up, but the trophy itself asks for nothing but chapter progress — leave the collectibles and activities for the cleanup stages and keep the story moving.",
-      "steps": ["Play the Chapter 3 story missions in order.", "Complete the chapter's final mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Play the Chapter 3 story missions in order.", "Complete the chapter's final mission."]
     },
     {
       "id": 6,
@@ -112,9 +112,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The last chapter trophy before the finale: complete Chapter 4 and it unlocks. Once it pops, only the final mission stands between you and the story's gold trophy, so finish any story-moment trophies you still owe before the finale.",
-      "steps": ["Play the Chapter 4 story missions in order.", "Complete the chapter's final mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Play the Chapter 4 story missions in order.", "Complete the chapter's final mission."]
     },
     {
       "id": 7,
@@ -129,9 +129,9 @@
       "stage": 1,
       "difficulty": 2,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "One of only two gold trophies: finish the final mission and it is yours. Before you start the finale, sweep up every other story-moment trophy — the named missions, the stranger strands and the partner trophies — because the finale is the natural point of no return for story-locked content. The description names no mission title, so the game itself tells you which mission is the last one.",
-      "steps": ["Complete Chapters 1–4.", "Finish the final mission; the gold trophy unlocks with it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Complete Chapters 1–4.", "Finish the final mission; the gold trophy unlocks with it."]
     },
     {
       "id": 8,
@@ -146,9 +146,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Breakfast Run is a named story mission, so this trophy is earned by playing it to completion — nothing else counts. It is flagged story-moment because the description ties it to that one mission: play it when it appears in the story and check mission replay if you need it again.",
-      "steps": ["Reach the Breakfast Run mission in the story.", "Complete the mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Reach the Breakfast Run mission in the story.", "Complete the mission."]
     },
     {
       "id": 9,
@@ -163,9 +163,9 @@
       "stage": 1,
       "difficulty": 2,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The Cartel Heist is a named story mission — likely a heist set-piece, given the name — and completing it earns this trophy. Heist missions in GTA games usually have a setup phase first, so follow the story prompts until the heist itself starts, then play it through to the end.",
-      "steps": ["Reach The Cartel Heist in the story.", "Complete any setup the story asks for, then the heist itself."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Reach The Cartel Heist in the story.", "Complete any setup the story asks for, then the heist itself."]
     },
     {
       "id": 10,
@@ -180,9 +180,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Child's Play is a named story mission: play it to completion and the trophy follows. The official description gives no location or method beyond the mission name, so there is no extra step to prepare — just take the mission when the story offers it.",
-      "steps": ["Reach the Child's Play mission in the story.", "Complete the mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Reach the Child's Play mission in the story.", "Complete the mission."]
     },
     {
       "id": 11,
@@ -197,9 +197,9 @@
       "stage": 1,
       "difficulty": 1,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Headliners is a named story mission and completing it earns this trophy. The description says nothing more than the mission name, so take the mission when it appears and play it through — no preparation or side requirement is stated.",
-      "steps": ["Reach the Headliners mission in the story.", "Complete the mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Reach the Headliners mission in the story.", "Complete the mission."]
     },
     {
       "id": 12,
@@ -214,9 +214,9 @@
       "stage": 1,
       "difficulty": 2,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "VCIA Takedown is a named story mission set at Vice City International Airport, judging by the name, and completing it earns this trophy. The official description names no approach, so play the mission as the story directs it and finish it — the trophy is tied to completion, not to a style or a score.",
-      "steps": ["Reach the VCIA Takedown mission in the story.", "Complete the mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Reach the VCIA Takedown mission in the story.", "Complete the mission."]
     },
     {
       "id": 13,
@@ -231,9 +231,9 @@
       "stage": 1,
       "difficulty": 2,
       "time": "Story play (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Operation Savage Glory is a named story mission — the military-sounding name suggests a bigger combat set-piece — and completing it earns this trophy. The description gives no tactics, so go in with full health and ammo as a matter of habit, play the mission through, and let completion do the work.",
-      "steps": ["Reach the Operation Savage Glory mission in the story.", "Complete the mission."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Reach the Operation Savage Glory mission in the story.", "Complete the mission."]
     },
     {
       "id": 14,
@@ -248,11 +248,10 @@
       "stage": 5,
       "difficulty": 5,
       "time": "After everything else (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The second gold trophy and the real endgame: PSN tracks this one to 100, and 100% completion in GTA games means the story plus the full checklist of side content — stranger strands, activities, collectibles and the rest — as the in-game stats page counts them. Do it last, after every other trophy, and use the in-game completion percentage as the source of truth, because the official description does not list what counts toward it. Open the in-game stats regularly from the start so nothing is left to guess at the end.",
-      "steps": ["Finish the story and every side strand, activity and collectible.", "Check the in-game stats page for what is still missing.", "Reach 100% completion."],
-      "sources": ["exophase", "psnprofiles"]
-    }
-    ,
+      "steps": ["Finish the story and every side strand, activity and collectible.", "Check the in-game stats page for what is still missing.", "Reach 100% completion."]
+    },
     {
       "id": 15,
       "name": "Cunning Stunts",
@@ -266,9 +265,9 @@
       "stage": 3,
       "difficulty": 3,
       "time": "Several hours, spread out (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks this one to 250, so it is a volume grind: every stunt you pull off anywhere in Leonida counts toward it. Do not chase it in one sitting — stunts happen naturally while driving, jumping and riding, so let the count build during story and exploration and mop up the remainder late with a fast vehicle and a favourite jump spot. The counter in this tracker lets you log your PSN progress as you go.",
-      "steps": ["Play normally; stunts count wherever you pull them off.", "Track the PSN count (0/250) and finish the remainder with repeated jumps."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Play normally; stunts count wherever you pull them off.", "Track the PSN count (0/250) and finish the remainder with repeated jumps."]
     },
     {
       "id": 16,
@@ -283,9 +282,9 @@
       "stage": 3,
       "difficulty": 2,
       "time": "1–2 hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 9 activity types, and this trophy asks for one try of each — not a win, not a high score, just a try. That makes it one of the cheapest trophies in the list: sample the shooting range, a race, fishing, an arcade game, bowling and whatever else the activities menu offers, one each, and it pops. Use it as your tour of the side content before you commit hours to any single activity.",
-      "steps": ["Open the activities list in game.", "Try each of the 9 activity types once."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Open the activities list in game.", "Try each of the 9 activity types once."]
     },
     {
       "id": 17,
@@ -300,9 +299,9 @@
       "stage": 3,
       "difficulty": 4,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "A silver for a reason: PSN tracks 42 Shooting Range challenges and this wants a gold medal in every one. Treat it as a skill project, not a checklist — learn one weapon class at a time, watch what each challenge scores (time, accuracy or both) before chasing gold, and retry freely, since a failed run costs nothing but time. Leave the hardest challenges for after the story, when your aim and your weapon handling are at their best.",
-      "steps": ["Visit a Shooting Range and try each challenge to learn its scoring.", "Earn a gold medal in all 42 challenges."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Visit a Shooting Range and try each challenge to learn its scoring.", "Earn a gold medal in all 42 challenges."]
     },
     {
       "id": 18,
@@ -317,9 +316,9 @@
       "stage": 3,
       "difficulty": 3,
       "time": "2–4 hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 14 drone race locations, and this wants a win at each one. Drone racing is its own skill — learn the course before racing it flat out, cut corners only where the gates allow, and retry a location until the win lands; a loss costs nothing but the run. Work through the locations one by one and tick them off in the counter below.",
-      "steps": ["Find a Top Fun Drone Race location.", "Win the race there; repeat at all 14 locations."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a Top Fun Drone Race location.", "Win the race there; repeat at all 14 locations."]
     },
     {
       "id": 19,
@@ -334,9 +333,9 @@
       "stage": 3,
       "difficulty": 3,
       "time": "3–5 hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Twenty different races, so variety matters more than repetition: winning the same race twenty times does not count. Pick a race you have not won, learn its route, win it, and move on to the next — a fast, well-handling car and a clean first lap beat raw speed. Keep a note of which races are won so you do not repeat one by accident.",
-      "steps": ["Enter a race you have not won yet.", "Win it, then move to a different race; repeat until 20 are won."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Enter a race you have not won yet.", "Win it, then move to a different race; repeat until 20 are won."]
     },
     {
       "id": 20,
@@ -351,9 +350,9 @@
       "stage": 3,
       "difficulty": 2,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Cal is a named fishing rival, and this trophy is one win against him in a fishing challenge. The official description says nothing about where Cal fishes or what he uses, so find him through the fishing activity itself, watch how the challenge scores — biggest catch, most fish, or fastest — and fish to that score rather than to luck. One win is all it takes.",
-      "steps": ["Start a fishing challenge against Cal.", "Out-fish him once to win the challenge."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Start a fishing challenge against Cal.", "Out-fish him once to win the challenge."]
     },
     {
       "id": 21,
@@ -368,9 +367,9 @@
       "stage": 3,
       "difficulty": 1,
       "time": "Under 30 minutes (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The cheapest activity trophy on the list: complete any one arcade game, once, and it pops. Pick the shortest game in the arcade, learn its controls in the first minute, and play it through to the end — no score target is stated, so completion is the whole requirement.",
-      "steps": ["Find an arcade and pick a game.", "Play it through to completion."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find an arcade and pick a game.", "Play it through to completion."]
     },
     {
       "id": 22,
@@ -385,9 +384,9 @@
       "stage": 2,
       "difficulty": 2,
       "time": "Side strand (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Andy is a stranger with a mission strand of his own, and this trophy is the last mission of that strand. Stranger strands unlock as you explore and meet people, so find Andy, play his missions in order, and finish the final one — and do it before the story ends, because stranger content is the most likely thing to close off late in a GTA story. It is flagged story-moment for exactly that reason.",
-      "steps": ["Meet Andy and start his mission strand.", "Play his missions in order to the final one and complete it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Meet Andy and start his mission strand.", "Play his missions in order to the final one and complete it."]
     },
     {
       "id": 23,
@@ -402,9 +401,9 @@
       "stage": 2,
       "difficulty": 2,
       "time": "Side strand (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Kenton's strand ends with this trophy, and the name hints at boats — expect water in the final mission. As with every stranger strand, play Kenton's missions in order and finish the last one before the finale, because a strand left unfinished when the story closes may not reopen.",
-      "steps": ["Meet Kenton and start his mission strand.", "Play his missions in order to the final one and complete it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Meet Kenton and start his mission strand.", "Play his missions in order to the final one and complete it."]
     },
     {
       "id": 24,
@@ -419,9 +418,9 @@
       "stage": 2,
       "difficulty": 2,
       "time": "Side strand (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Billy's strand ends here — the name suggests a solo ride, so expect to be on your own for the finale. Find Billy, play his missions in order, and complete the final one while the strand is still open, before the end of the story.",
-      "steps": ["Meet Billy and start his mission strand.", "Play his missions in order to the final one and complete it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Meet Billy and start his mission strand.", "Play his missions in order to the final one and complete it."]
     },
     {
       "id": 25,
@@ -436,9 +435,9 @@
       "stage": 2,
       "difficulty": 3,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "A silver that counts your stranger work: PSN tracks 8 completed strands, so you need eight strangers' full mission chains, not eight single missions. Andy, Kenton, Billy, Randy and Tyrone each have a trophy of their own, so those five strands are confirmed — find at least three more strangers across Leonida and finish their chains too. Explore the map between story missions, because strangers appear where you look, not where the story sends you.",
-      "steps": ["Meet strangers across Leonida and start their strands.", "Complete 8 full strands, including Andy, Kenton, Billy, Randy and Tyrone."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Meet strangers across Leonida and start their strands.", "Complete 8 full strands, including Andy, Kenton, Billy, Randy and Tyrone."]
     },
     {
       "id": 26,
@@ -453,9 +452,9 @@
       "stage": 2,
       "difficulty": 2,
       "time": "Side strand (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Randy's strand ends with this trophy, and the name points at supply runs — expect deliveries or pickups in his missions. Play Randy's missions in order and complete the final one before the story closes, as with every stranger strand.",
-      "steps": ["Meet Randy and start his mission strand.", "Play his missions in order to the final one and complete it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Meet Randy and start his mission strand.", "Play his missions in order to the final one and complete it."]
     },
     {
       "id": 27,
@@ -470,9 +469,9 @@
       "stage": 2,
       "difficulty": 2,
       "time": "Side strand (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Tyrone's strand ends here. Find Tyrone, play his missions in order, and finish the final one while the strand is open — stranger strands are flagged story-moment in this guide because they are the side content most likely to close off near the end of the story.",
-      "steps": ["Meet Tyrone and start his mission strand.", "Play his missions in order to the final one and complete it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Meet Tyrone and start his mission strand.", "Play his missions in order to the final one and complete it."]
     },
     {
       "id": 28,
@@ -487,9 +486,9 @@
       "stage": 3,
       "difficulty": 2,
       "time": "2–3 hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 18 meditation spots, and this wants a meditation at each one. The spots are spread across Leonida, so treat it as a sightseeing tour: visit them while you explore for the 52 areas, meditate at each, and tick it off in the counter. No spot is named in the official description, so use the in-game map markers and work through them region by region.",
-      "steps": ["Find a meditation spot and meditate there.", "Repeat at all 18 spots across Leonida."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a meditation spot and meditate there.", "Repeat at all 18 spots across Leonida."]
     },
     {
       "id": 29,
@@ -504,11 +503,10 @@
       "stage": 2,
       "difficulty": 3,
       "time": "1–2 hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Bret wants one unique animal hunted, and the official description names neither the animal nor where it lives — so this guide cannot pin down a location honestly. Find Bret, take his hunt, and follow the hunt itself: the game will point you at the animal once the hunt starts. Bring a weapon suited to hunting and take the shot cleanly; one unique animal is all it takes.",
-      "steps": ["Meet Bret and take his hunt.", "Track and hunt the unique animal he names."],
-      "sources": ["exophase", "psnprofiles"]
-    }
-    ,
+      "steps": ["Meet Bret and take his hunt.", "Track and hunt the unique animal he names."]
+    },
     {
       "id": 30,
       "name": "Don't Touch My Deck",
@@ -522,9 +520,9 @@
       "stage": 4,
       "difficulty": 3,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 3 completed card sets, so this is a collecting grind with a clear end: find the collectible cards scattered around Leonida and finish three full sets. Cards are usually tucked into out-of-the-way places, so search while you explore for the 52 areas and keep a checklist of which sets are complete — the counter below tracks sets, not single cards.",
-      "steps": ["Find collectible cards while exploring Leonida.", "Complete 3 full card sets."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find collectible cards while exploring Leonida.", "Complete 3 full card sets."]
     },
     {
       "id": 31,
@@ -539,9 +537,9 @@
       "stage": 4,
       "difficulty": 3,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks this one to 100, and WAiNK It is a location activity — the name is a joke, the task is a tour. One hundred spots across Leonida is a lot of ground, so fold it into your exploration for the 52 areas: whenever you enter a new area, look for the WAiNK spot there before you leave. The counter below keeps your running total.",
-      "steps": ["Find a WAiNK spot and use it.", "Repeat at 100 different locations."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a WAiNK spot and use it.", "Repeat at 100 different locations."]
     },
     {
       "id": 32,
@@ -556,9 +554,9 @@
       "stage": 5,
       "difficulty": 3,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 50 completed challenges, and challenges in GTA games are the small tasks layered over everything else — driving, shooting, flying, and more. Do not hunt this one directly at first: play the game, and the count will climb on its own. Check the in-game challenges list late in your run and mop up the fifty with the easiest ones you have left.",
-      "steps": ["Play story, activities and exploration; challenges complete as you go.", "Check the in-game challenges list and finish the easiest remaining ones to reach 50."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Play story, activities and exploration; challenges complete as you go.", "Check the in-game challenges list and finish the easiest remaining ones to reach 50."]
     },
     {
       "id": 33,
@@ -573,9 +571,9 @@
       "stage": 5,
       "difficulty": 3,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "This one needs three things at once: your partner beside you, a 4-star wanted level, and a clean escape. The description says nothing about which partner or where, so set it up deliberately — bring your partner along, raise the heat to exactly four stars, then break line of sight and stay out of the search area until the stars clear. It is flagged timing-sensitive because it needs a partner present, and partners are not always available. Do it while a partner is with you in the story rather than leaving it to the post-game.",
-      "steps": ["Have your partner with you.", "Raise a 4-star wanted level.", "Escape and stay hidden until the wanted level clears."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Have your partner with you.", "Raise a 4-star wanted level.", "Escape and stay hidden until the wanted level clears."]
     },
     {
       "id": 34,
@@ -590,9 +588,9 @@
       "stage": 5,
       "difficulty": 3,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Three shop robberies in a row, with your partner, and — the hard part — without losing your wanted level between them. Plan the route first: pick three shops close together, rob each quickly, and keep moving so the heat never drops off. If the wanted level clears between robberies, the chain breaks and you start over. Like the other partner trophy, do it while a partner is available in the story.",
-      "steps": ["Have your partner with you and pick three nearby shops.", "Rob all three back-to-back without losing your wanted level."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Have your partner with you and pick three nearby shops.", "Rob all three back-to-back without losing your wanted level."]
     },
     {
       "id": 35,
@@ -607,9 +605,9 @@
       "stage": 4,
       "difficulty": 2,
       "time": "Across the whole game (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 100 discovered vehicles, and discovery means seeing — or driving — a new model for the first time. Variety is the whole game here: drive everything you pass, visit different districts, and the count climbs on its own. Rare and mission-only vehicles are the ones to watch for late, so save a few obvious ones and check your discovered list before the end.",
-      "steps": ["Drive or encounter new vehicle models as you explore.", "Reach 100 different vehicles discovered."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Drive or encounter new vehicle models as you explore.", "Reach 100 different vehicles discovered."]
     },
     {
       "id": 36,
@@ -624,9 +622,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Combat Focus is the game's slow-down aiming mode, and this trophy wants five takedowns inside one use of it. Set it up on purpose: find a fight with at least five enemies grouped together, trigger Combat Focus with a weapon that kills fast, and chain the shots before the effect ends. A busy shootout during a story mission is the natural place to try it.",
-      "steps": ["Find a fight with five or more enemies close together.", "Trigger Combat Focus and take down 5 enemies before it ends."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a fight with five or more enemies close together.", "Trigger Combat Focus and take down 5 enemies before it ends."]
     },
     {
       "id": 37,
@@ -641,9 +639,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Under 30 minutes (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "VCIA is Vice City International Airport, and an unscheduled departure means leaving it by air without a ticket — steal a plane and take off. The description gives no runway or aircraft, so get airside however you can, find a plane, and get it into the sky; the trophy should pop as you leave the airport behind. Expect airport security to object.",
-      "steps": ["Get into VCIA airport.", "Steal an aircraft and take off."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Get into VCIA airport.", "Steal an aircraft and take off."]
     },
     {
       "id": 38,
@@ -658,9 +656,9 @@
       "stage": 5,
       "difficulty": 3,
       "time": "Unknown (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Honest note first: the official description is a joke line, not instructions — it names Rhinos, the GTA series' tank, and says nothing about what to do with one. No verified method existed when this guide was written on launch day. The literal reading is that the trophy involves a Rhino tank somehow, so the sensible play is to find one in the game, drive it, and see what the in-game trophy text or a community guide says once players have tested it. Do not trust any walkthrough that claims a method without a source.",
-      "steps": ["Find a Rhino tank in the game.", "Use it as the in-game trophy hint directs; check a sourced community guide once one is published."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a Rhino tank in the game.", "Use it as the in-game trophy hint directs; check a sourced community guide once one is published."]
     },
     {
       "id": 39,
@@ -675,9 +673,9 @@
       "stage": 5,
       "difficulty": 3,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "One jewelry store, robbed clean, with nobody spotting you. Stealth is the whole requirement: plan the entry, avoid cameras and sightlines, take what you came for and leave before anyone raises the alarm. If you are detected, the attempt fails — leave, reset, and try again rather than fighting your way out.",
-      "steps": ["Find a jewelry store and plan a quiet entry.", "Rob it without being detected and leave cleanly."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a jewelry store and plan a quiet entry.", "Rob it without being detected and leave cleanly."]
     },
     {
       "id": 40,
@@ -692,9 +690,9 @@
       "stage": 5,
       "difficulty": 4,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "A silver for five bank vault robberies, each ending in a getaway — and the escape counts, so a robbery that ends in a bust or a death does not. PSN tracks 5, so you need five clean jobs, not five attempts. Plan each one like the jewelry store: get in, get the vault, get out, and lose the heat before you count it done. Space them out and learn from each escape.",
-      "steps": ["Find a bank vault and rob it.", "Escape cleanly; repeat for 5 vaults."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a bank vault and rob it.", "Escape cleanly; repeat for 5 vaults."]
     },
     {
       "id": 41,
@@ -709,9 +707,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "A nod to the classic GTA V heist of the same name: stop an armored truck, take its cargo, and escape. Trucks run routes around Leonida, so find one on the road, block or disable it, grab the money and lose the heat. One clean job is all it takes.",
-      "steps": ["Find an armored truck on the road.", "Rob it and escape."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find an armored truck on the road.", "Rob it and escape."]
     },
     {
       "id": 42,
@@ -726,9 +724,9 @@
       "stage": 4,
       "difficulty": 3,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 52 areas, and this wants every one of them visited. Leonida is the whole state, not just Vice City, so the map is the checklist: work through it region by region, drive into each named area until it registers, and use the in-game map to spot the gaps. Do it alongside the WAiNK spots, meditation spots and card hunting — the same tour covers four trophies at once.",
-      "steps": ["Open the in-game map and note which areas are unvisited.", "Visit all 52 areas of Leonida."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Open the in-game map and note which areas are unvisited.", "Visit all 52 areas of Leonida."]
     },
     {
       "id": 43,
@@ -743,9 +741,9 @@
       "stage": 5,
       "difficulty": 3,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 9 gangs, and this wants one illegal operation robbed from each of them. The gangs are spread across Leonida, so this is a tour of the underworld: find each gang's operation, hit it, and move on to the next. Keep a list of which gangs you have hit — nine is easy to lose track of — and expect each gang to fight back.",
-      "steps": ["Find an illegal operation belonging to a gang.", "Rob it; repeat for all 9 gangs."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find an illegal operation belonging to a gang.", "Rob it; repeat for all 9 gangs."]
     },
     {
       "id": 44,
@@ -760,11 +758,10 @@
       "stage": 4,
       "difficulty": 1,
       "time": "Under 30 minutes (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The most relaxing trophy on the list: go to Ocean Beach, find a bar with a view, and enjoy a cocktail there. The description names the beach, not the bar, so walk the beachfront until you find a spot that serves drinks with the ocean in front of it, order one, and the trophy should follow. A nod to the opening of the very first GTA, judging by the name.",
-      "steps": ["Go to Ocean Beach.", "Find a beachfront bar and enjoy a cocktail with the view."],
-      "sources": ["exophase", "psnprofiles"]
-    }
-    ,
+      "steps": ["Go to Ocean Beach.", "Find a beachfront bar and enjoy a cocktail with the view."]
+    },
     {
       "id": 45,
       "name": "Capital Offense",
@@ -778,9 +775,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Under 30 minutes (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Drive into a vehicle showroom, then smash your way out through the glass — in classic GTA style. The description gives no showroom name, so any vehicle showroom should do: pick a car inside, put your foot down, and go straight through the front window. Expect the police to take an interest immediately after.",
-      "steps": ["Find a vehicle showroom and drive a car inside.", "Smash out through the showroom glass."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Find a vehicle showroom and drive a car inside.", "Smash out through the showroom glass."]
     },
     {
       "id": 46,
@@ -795,9 +792,9 @@
       "stage": 3,
       "difficulty": 1,
       "time": "Under 30 minutes (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "The one activity with a named venue: the Kolt & Associates bowling alley. Go there, bowl, and follow through — the description asks for a game of bowling at that alley, not a score, so play a game through and the trophy follows. It also counts toward the 9 activity types for Master of None.",
-      "steps": ["Go to the Kolt & Associates bowling alley.", "Play a game of bowling through to the end."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Go to the Kolt & Associates bowling alley.", "Play a game of bowling through to the end."]
     },
     {
       "id": 47,
@@ -812,9 +809,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Unknown (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Honest note first: the official description is a riddle, not instructions — a partnership with mass appeal, and nothing else. No verified method existed when this guide was written on launch day. The literal reading points at doing something with your partner that draws a crowd, so watch for partner activities that involve an audience and check the in-game trophy hint or a sourced community guide once players have tested it. Do not trust a walkthrough that claims a method without a source.",
-      "steps": ["Look for partner activities that involve a crowd or an audience.", "Check the in-game hint and sourced community guides once a method is verified."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Look for partner activities that involve a crowd or an audience.", "Check the in-game hint and sourced community guides once a method is verified."]
     },
     {
       "id": 48,
@@ -829,9 +826,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Across the whole game (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks this one to 500, so choices are a currency you spend all game long — dialogue picks, decisions in missions, and everyday calls the game counts as a choice. Five hundred is a lot, which means you should never skip a decision: answer every prompt, take every branching moment, and let the count build across the whole playthrough. Check the PSN counter late in the game to see how many are left.",
-      "steps": ["Make choices whenever the game offers one — dialogue, missions, activities.", "Reach 500 choices made."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Make choices whenever the game offers one — dialogue, missions, activities.", "Reach 500 choices made."]
     },
     {
       "id": 49,
@@ -846,9 +843,9 @@
       "stage": 5,
       "difficulty": 1,
       "time": "Unknown (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Honest note first: the official description is a riddle — second time's the charm — and names no activity, place or method. No verified method existed when this guide was written on launch day. The literal reading is that something fails once and succeeds on the second try, so the natural place to earn it is any activity you can retry: fail once, then succeed immediately after. Check the in-game trophy hint and sourced community guides once players have pinned it down.",
-      "steps": ["Try an activity you can retry.", "Fail once, then succeed on the immediate second try."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Try an activity you can retry.", "Fail once, then succeed on the immediate second try."]
     },
     {
       "id": 50,
@@ -863,9 +860,9 @@
       "stage": 4,
       "difficulty": 2,
       "time": "Unknown (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Honest note first: the official description is a reaction, not instructions — something strange happens, and no place or trigger is named. No verified method existed when this guide was written on launch day. The name points at the unexplained — the GTA series has a long history of UFOs and odd encounters — so explore the strange corners of Leonida and watch for anything out of the ordinary, and check sourced community guides once players have found the trigger.",
-      "steps": ["Explore Leonida's odd and out-of-the-way places.", "Trigger the strange event; check sourced community guides once it is verified."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Explore Leonida's odd and out-of-the-way places.", "Trigger the strange event; check sourced community guides once it is verified."]
     },
     {
       "id": 51,
@@ -880,9 +877,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "A melee drive-by means hitting someone with a melee weapon from a moving vehicle — the bowling name is the joke, the knockdown is the task. Find a pedestrian, drive past slowly with a melee weapon ready, and land the hit from the car. It takes one clean knockdown, so pick a quiet street and a slow speed rather than a busy highway.",
-      "steps": ["Get a melee weapon and a vehicle.", "Drive past a pedestrian and knock them down with a melee hit from the vehicle."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Get a melee weapon and a vehicle.", "Drive past a pedestrian and knock them down with a melee hit from the vehicle."]
     },
     {
       "id": 52,
@@ -897,9 +894,9 @@
       "stage": 5,
       "difficulty": 3,
       "time": "Several hours (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks $250,000 laundered, so this is a money loop: earn Marked Bills — from robberies and heists, most likely — then wash them through your contacts for clean cash. Every dollar laundered counts toward the total, so launder often instead of sitting on marked bills, and keep robbing to keep the supply coming. The counter below tracks your running total.",
-      "steps": ["Earn Marked Bills from robberies and heists.", "Launder them through your contacts until $250,000 is washed."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Earn Marked Bills from robberies and heists.", "Launder them through your contacts until $250,000 is washed."]
     },
     {
       "id": 53,
@@ -914,9 +911,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Across the whole game (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks $100,000 spent across all shops, and spending is something you do all game — weapons, clothes, food, car mods. The trick is to spend normally and let it build, then check the counter late: if you are short, the fastest top-up is the most expensive thing you have not bought yet. Do not waste money early on things you do not need, but do not hoard it either.",
-      "steps": ["Spend money across shops as you play.", "Reach $100,000 total spent."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Spend money across shops as you play.", "Reach $100,000 total spent."]
     },
     {
       "id": 54,
@@ -931,9 +928,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Late game (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "PSN tracks 8 garage properties, and this wants all of them bought. Garages cost real money, so save for this one until the story is paying well — buying a garage early starves the rest of your run. Once you can afford it, buy them one by one and tick them off; eight is the whole set, so there is nothing hidden to find.",
-      "steps": ["Save money through the story and side work.", "Purchase all 8 garage properties."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Save money through the story and side work.", "Purchase all 8 garage properties."]
     },
     {
       "id": 55,
@@ -948,9 +945,9 @@
       "stage": 5,
       "difficulty": 2,
       "time": "Under 1 hour (estimate)",
+      "sources": ["exophase", "psnprofiles"],
       "guide": "Scooter Bros is an in-game app, and this trophy wants 10 vehicles registered to it. Find vehicles you like — or just ten you pass — open the app, and register each one. It pairs naturally with discovering 100 vehicles, so register the interesting ones as you find them instead of hunting ten at the end.",
-      "steps": ["Open the Scooter Bros app in game.", "Register 10 vehicles to it."],
-      "sources": ["exophase", "psnprofiles"]
+      "steps": ["Open the Scooter Bros app in game.", "Register 10 vehicles to it."]
     }
   ],
   "roadmap": [

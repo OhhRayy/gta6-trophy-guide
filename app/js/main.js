@@ -4,12 +4,12 @@ import { visibleTrophies } from './filters.js';
 import { renderHeaderCounts, renderChecklist, renderGuidePane, renderRoadmap, renderMissables, renderPlanner, renderSourcesNote } from './views.js';
 
 const DATA_URL = 'data/trophies.json';
-const DEFAULT_SELECTED_ID = 17; // The Shootist: a silver with a PSN count, a full guide and sources.
+const FALLBACK_SELECTED_ID = 17; // The Shootist: a silver with a PSN count, a full guide and sources.
 
-const state = loadSavedProgress();
-const filters = { kind: 'all', grade: 'all', query: '' };
-let selectedId = DEFAULT_SELECTED_ID;
-let data = null;
+const progress = loadSavedProgress();
+const activeFilters = { kind: 'all', grade: 'all', query: '' };
+let selectedId = FALLBACK_SELECTED_ID;
+let guideData = null;
 
 const $ = (id) => document.getElementById(id);
 const listEl = $('trophyList');
@@ -17,51 +17,53 @@ const metaEl = $('listMeta');
 const emptyEl = $('emptyNote');
 const detailPane = $('detailPane');
 
-function earnedSet() {
-  return new Set(state.earned);
+function earnedNames() {
+  return new Set(progress.earned);
 }
 
 function renderAll() {
-  if (!data) return;
-  const earned = earnedSet();
-  renderHeaderCounts($('counts'), $('progressFill'), $('progressText'), data.trophies, earned);
-  const shown = visibleTrophies(data.trophies, { ...filters, hideEarned: state.hideEarned }, earned);
+  if (!guideData) return;
+  const earned = earnedNames();
+  renderHeaderCounts($('counts'), $('progressFill'), $('progressText'), guideData.trophies, earned);
+  const shown = visibleTrophies(guideData.trophies, { ...activeFilters, hideEarned: progress.hideEarned }, earned);
   renderChecklist(listEl, metaEl, emptyEl, shown, checklistContext(earned));
-  const selected = data.trophies.find((t) => t.id === selectedId) || data.trophies[0];
-  renderGuidePane(detailPane, selected, data, detailContext());
-  renderRoadmap($('roadmapList'), $('stageBars'), data.roadmap, data.trophies, earned);
-  renderMissables($('missableList'), data.trophies, checklistContext(earned));
-  renderPlanner($('plannerList'), $('kindBars'), data.trophies, earned, checklistContext(earned));
-  $('missableNote').textContent = data.missableNote;
+  const selected = guideData.trophies.find((t) => t.id === selectedId) || guideData.trophies[0];
+  renderGuidePane(detailPane, selected, guideData, detailContext());
+  renderRoadmap($('roadmapList'), $('stageBars'), guideData.roadmap, guideData.trophies, earned);
+  renderMissables($('missableList'), guideData.trophies, checklistContext(earned));
+  renderPlanner($('plannerList'), $('kindBars'), guideData.trophies, earned, checklistContext(earned));
+  $('missableNote').textContent = guideData.missableNote;
   window.__shotReady = true;
 }
 
 function checklistContext(earned) {
   return {
-    state,
+    state: progress,
     earnedSet: earned,
-    spoilerOn: state.spoiler,
+    spoilerOn: progress.spoiler,
     selectedId,
-    total: data.trophies.length,
-    kind: filters.kind,
-    onToggle: (name) => { toggleEarned(state, name); renderAll(); },
+    total: guideData.trophies.length,
+    kind: activeFilters.kind,
+    onToggle: (name) => { toggleEarned(progress, name); renderAll(); },
     onSelect: (id) => { selectedId = id; renderAll(); },
-    onCount: (id, value) => { setCounter(state, id, value); renderAll(); },
+    onCount: (id, value) => { setCounter(progress, id, value); renderAll(); },
   };
 }
 
 function detailContext() {
   return {
-    state,
-    earnedSet: earnedSet(),
-    spoilerOn: state.spoiler,
-    onCount: (id, value) => { setCounter(state, id, value); renderAll(); },
-    onNote: (id, text) => { setNote(state, id, text); },
+    state: progress,
+    earnedSet: earnedNames(),
+    spoilerOn: progress.spoiler,
+    onCount: (id, value) => { setCounter(progress, id, value); renderAll(); },
+    onNote: (id, text) => { setNote(progress, id, text); },
   };
 }
 
+const VIEW_NAMES = ['checklist', 'roadmap', 'missables', 'planner'];
+
 function showView(name) {
-  for (const view of ['checklist', 'roadmap', 'missables', 'planner']) {
+  for (const view of VIEW_NAMES) {
     $(`view-${view}`).hidden = view !== name;
     document.querySelector(`.tab[data-view="${view}"]`).classList.toggle('active', view === name);
   }
@@ -70,54 +72,54 @@ function showView(name) {
 
 function viewFromHash() {
   const name = location.hash.replace('#/', '');
-  return ['checklist', 'roadmap', 'missables', 'planner'].includes(name) ? name : 'checklist';
+  return VIEW_NAMES.includes(name) ? name : 'checklist';
 }
 
 async function boot() {
   const response = await fetch(DATA_URL);
-  data = await response.json();
-  renderSourcesNote($('sourcesNote'), data.sources);
+  guideData = await response.json();
+  renderSourcesNote($('sourcesNote'), guideData.sources);
 
   document.querySelectorAll('.tab').forEach((tab) => {
     tab.addEventListener('click', () => showView(tab.dataset.view));
   });
   document.querySelectorAll('#kindChips .chip').forEach((chip) => {
     chip.addEventListener('click', () => {
-      filters.kind = chip.dataset.kind;
+      activeFilters.kind = chip.dataset.kind;
       document.querySelectorAll('#kindChips .chip').forEach((c) => c.classList.toggle('active', c === chip));
       renderAll();
     });
   });
   $('grade').addEventListener('change', (event) => {
-    filters.grade = event.target.value;
+    activeFilters.grade = event.target.value;
     renderAll();
   });
   $('search').addEventListener('input', (event) => {
-    filters.query = event.target.value.trim();
+    activeFilters.query = event.target.value.trim();
     renderAll();
   });
-  $('spoiler').checked = state.spoiler;
+  $('spoiler').checked = progress.spoiler;
   $('spoiler').addEventListener('change', (event) => {
-    state.spoiler = event.target.checked;
-    saveProgress(state);
+    progress.spoiler = event.target.checked;
+    saveProgress(progress);
     renderAll();
   });
-  $('hideEarned').checked = state.hideEarned;
+  $('hideEarned').checked = progress.hideEarned;
   $('hideEarned').addEventListener('change', (event) => {
-    state.hideEarned = event.target.checked;
-    saveProgress(state);
+    progress.hideEarned = event.target.checked;
+    saveProgress(progress);
     renderAll();
   });
-  $('exportBtn').addEventListener('click', () => exportProgressFile(state));
+  $('exportBtn').addEventListener('click', () => exportProgressFile(progress));
   $('importFile').addEventListener('change', async (event) => {
     const file = event.target.files[0];
     if (!file) return;
     try {
       const next = parseImportedProgress(await file.text());
-      Object.assign(state, next);
-      saveProgress(state);
-      $('spoiler').checked = state.spoiler;
-      $('hideEarned').checked = state.hideEarned;
+      Object.assign(progress, next);
+      saveProgress(progress);
+      $('spoiler').checked = progress.spoiler;
+      $('hideEarned').checked = progress.hideEarned;
       renderAll();
     } catch {
       alert('That file is not a Leonida Platinum progress export.');
@@ -126,10 +128,10 @@ async function boot() {
   });
   $('resetBtn').addEventListener('click', () => {
     if (!confirm('Reset all earned trophies, counters and notes?')) return;
-    Object.assign(state, freshProgress());
-    saveProgress(state);
-    $('spoiler').checked = state.spoiler;
-    $('hideEarned').checked = state.hideEarned;
+    Object.assign(progress, freshProgress());
+    saveProgress(progress);
+    $('spoiler').checked = progress.spoiler;
+    $('hideEarned').checked = progress.hideEarned;
     renderAll();
   });
   window.addEventListener('hashchange', () => showView(viewFromHash()));

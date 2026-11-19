@@ -1,25 +1,30 @@
 // Leonida Platinum — saved progress: localStorage, export and import.
+//
+// One shape, everywhere: { earned: string[], counts: {id: n}, notes: {id: text},
+// spoiler: boolean, hideEarned: boolean }. Earned trophies are tracked by name,
+// counters and notes by trophy id. A corrupt or foreign value falls back to a
+// fresh, empty state instead of breaking the page.
 export const STORAGE_KEY = 'leonida-platinum-v1';
+
+export function freshProgress() {
+  return { earned: [], counts: {}, notes: {}, spoiler: true, hideEarned: false };
+}
 
 export function loadSavedProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return freshProgress();
-    const parsed = JSON.parse(raw);
+    const saved = JSON.parse(raw);
     return {
-      earned: Array.isArray(parsed.earned) ? parsed.earned : [],
-      counts: parsed.counts && typeof parsed.counts === 'object' ? parsed.counts : {},
-      notes: parsed.notes && typeof parsed.notes === 'object' ? parsed.notes : {},
-      spoiler: parsed.spoiler !== false,
-      hideEarned: parsed.hideEarned === true,
+      earned: Array.isArray(saved.earned) ? saved.earned : [],
+      counts: saved.counts && typeof saved.counts === 'object' ? saved.counts : {},
+      notes: saved.notes && typeof saved.notes === 'object' ? saved.notes : {},
+      spoiler: saved.spoiler !== false,
+      hideEarned: saved.hideEarned === true,
     };
   } catch {
     return freshProgress();
   }
-}
-
-export function freshProgress() {
-  return { earned: [], counts: {}, notes: {}, spoiler: true, hideEarned: false };
 }
 
 export function saveProgress(state) {

@@ -1,19 +1,24 @@
 // Leonida Platinum — views: checklist, guide pane, roadmap, missables, planner.
+//
+// Every view is built with DOM calls, never innerHTML, so a trophy name or a
+// saved note can never break the page. A row's context (`ctx`) carries the
+// saved state, the earned set, the spoiler flag and the callbacks that change
+// state and re-render.
 import { spoilerHides } from './filters.js';
 
 export function gradeLabel(grade) {
   return grade.charAt(0).toUpperCase() + grade.slice(1);
 }
 
-function el(tag, className, text) {
+function makeEl(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
   if (text !== undefined) node.textContent = text;
   return node;
 }
 
-function gradeTag(grade) {
-  return el('span', `tag grade-${grade}`, gradeLabel(grade));
+function gradePill(grade) {
+  return makeEl('span', `tag grade-${grade}`, gradeLabel(grade));
 }
 
 export function renderHeaderCounts(countsEl, fillEl, textEl, trophies, earnedSet) {
@@ -27,24 +32,32 @@ export function renderHeaderCounts(countsEl, fillEl, textEl, trophies, earnedSet
   }
   countsEl.replaceChildren();
   for (const grade of ['platinum', 'gold', 'silver', 'bronze']) {
-    const chip = el('span', 'count-chip');
-    const b = el('b', null, `${byGrade[grade].earned}/${byGrade[grade].total}`);
+    const chip = makeEl('span', 'count-chip');
+    const b = makeEl('b', null, `${byGrade[grade].earned}/${byGrade[grade].total}`);
     chip.append(b, document.createTextNode(` ${gradeLabel(grade)}`));
     countsEl.append(chip);
   }
   const missableTotal = trophies.filter((t) => t.missable).length;
   const missableEarned = trophies.filter((t) => t.missable && earnedSet.has(t.name)).length;
-  const missChip = el('span', 'count-chip');
-  const mb = el('b', null, `${missableEarned}/${missableTotal}`);
+  const missChip = makeEl('span', 'count-chip');
+  const mb = makeEl('b', null, `${missableEarned}/${missableTotal}`);
   missChip.append(mb, document.createTextNode(' missable watched'));
   countsEl.append(missChip);
   fillEl.style.width = `${total ? Math.round((earned / total) * 100) : 0}%`;
   textEl.textContent = `${earned} of ${total} earned — ${total ? Math.round((earned / total) * 100) : 0}% to platinum`;
 }
 
-function trophyRow(trophy, ctx) {
+function kindTags(tagsEl, trophy) {
+  if (trophy.kind === 'story') tagsEl.append(makeEl('span', 'tag', 'Story'));
+  if (trophy.kind === 'collectible') tagsEl.append(makeEl('span', 'tag', 'Collectible'));
+  if (trophy.kind === 'activity') tagsEl.append(makeEl('span', 'tag', 'Activity'));
+  if (trophy.kind === 'stranger') tagsEl.append(makeEl('span', 'tag', 'Stranger'));
+  if (trophy.kind === 'money') tagsEl.append(makeEl('span', 'tag', 'Money'));
+}
+
+function trophyRowEl(trophy, ctx) {
   const { earnedSet, spoilerOn, selectedId, onToggle, onSelect } = ctx;
-  const li = el('li', 'trophy-item');
+  const li = makeEl('li', 'trophy-item');
   if (earnedSet.has(trophy.name)) li.classList.add('earned');
   if (selectedId === trophy.id) li.classList.add('selected');
   const box = document.createElement('input');
@@ -53,29 +66,25 @@ function trophyRow(trophy, ctx) {
   box.setAttribute('aria-label', `Mark ${trophy.name} earned`);
   box.addEventListener('click', (event) => event.stopPropagation());
   box.addEventListener('change', () => onToggle(trophy.name));
-  const body = el('div');
+  const body = makeEl('div');
   const hidden = spoilerHides(trophy, spoilerOn, earnedSet);
   if (hidden) {
-    body.append(el('div', 'trophy-name', 'Hidden story trophy'));
-    body.append(el('div', 'trophy-desc spoiler-mask', 'Spoiler-free mode hides this story trophy until you earn it. Tick it off to reveal it.'));
+    body.append(makeEl('div', 'trophy-name', 'Hidden story trophy'));
+    body.append(makeEl('div', 'trophy-desc spoiler-mask', 'Spoiler-free mode hides this story trophy until you earn it. Tick it off to reveal it.'));
   } else {
-    body.append(el('div', 'trophy-name', trophy.name));
-    body.append(el('div', 'trophy-desc', trophy.description));
+    body.append(makeEl('div', 'trophy-name', trophy.name));
+    body.append(makeEl('div', 'trophy-desc', trophy.description));
   }
-  const tags = el('div', 'trophy-tags');
-  tags.append(gradeTag(trophy.grade));
-  if (trophy.missable) tags.append(el('span', 'tag missable', 'Missable — story moment'));
-  if (trophy.kind === 'story') tags.append(el('span', 'tag', 'Story'));
-  if (trophy.kind === 'collectible') tags.append(el('span', 'tag', 'Collectible'));
-  if (trophy.kind === 'activity') tags.append(el('span', 'tag', 'Activity'));
-  if (trophy.kind === 'stranger') tags.append(el('span', 'tag', 'Stranger'));
-  if (trophy.kind === 'money') tags.append(el('span', 'tag', 'Money'));
-  if (trophy.target) tags.append(el('span', 'tag', `PSN target: ${trophy.target.toLocaleString('en-US')} ${trophy.targetLabel || ''}`.trim()));
+  const tags = makeEl('div', 'trophy-tags');
+  tags.append(gradePill(trophy.grade));
+  if (trophy.missable) tags.append(makeEl('span', 'tag missable', 'Missable — story moment'));
+  kindTags(tags, trophy);
+  if (trophy.target) tags.append(makeEl('span', 'tag', `PSN target: ${trophy.target.toLocaleString('en-US')} ${trophy.targetLabel || ''}`.trim()));
   body.append(tags);
-  const side = el('div');
+  const side = makeEl('div');
   if (trophy.target) {
     const count = ctx.state.counts[String(trophy.id)] || 0;
-    const line = el('div', 'counter-line');
+    const line = makeEl('div', 'counter-line');
     line.append(document.createTextNode(`${count.toLocaleString('en-US')} / ${trophy.target.toLocaleString('en-US')} `));
     const input = document.createElement('input');
     input.type = 'number';
@@ -88,7 +97,7 @@ function trophyRow(trophy, ctx) {
     line.append(input);
     side.append(line);
   }
-  side.append(el('div', 'counter-line', `Stage ${trophy.stage} · Difficulty ${trophy.difficulty}/5 · ${trophy.time}`));
+  side.append(makeEl('div', 'counter-line', `Stage ${trophy.stage} · Difficulty ${trophy.difficulty}/5 · ${trophy.time}`));
   li.append(box, body, side);
   li.addEventListener('click', () => onSelect(trophy.id));
   return li;
@@ -96,7 +105,7 @@ function trophyRow(trophy, ctx) {
 
 export function renderChecklist(listEl, metaEl, emptyEl, shown, ctx) {
   listEl.replaceChildren();
-  for (const t of shown) listEl.append(trophyRow(t, ctx));
+  for (const t of shown) listEl.append(trophyRowEl(t, ctx));
   const earnedShown = shown.filter((t) => ctx.earnedSet.has(t.name)).length;
   metaEl.textContent = `Showing ${shown.length} of ${ctx.total} trophies — ${earnedShown} earned in this view. Click a trophy to open its guide.`;
   if (shown.length === 0) {
@@ -113,27 +122,27 @@ export function renderGuidePane(pane, trophy, data, ctx) {
   const { earnedSet, spoilerOn, state } = ctx;
   pane.replaceChildren();
   if (!trophy) {
-    pane.append(el('h2', null, 'Pick a trophy'));
-    pane.append(el('p', null, 'Click any trophy in the list to open its guide, steps, difficulty, sources and your own notes.'));
+    pane.append(makeEl('h2', null, 'Pick a trophy'));
+    pane.append(makeEl('p', null, 'Click any trophy in the list to open its guide, steps, difficulty, sources and your own notes.'));
     return;
   }
   const hidden = spoilerHides(trophy, spoilerOn, earnedSet);
-  pane.append(el('h2', null, hidden ? 'Hidden story trophy' : trophy.name));
-  const grades = el('div', 'detail-grade');
-  grades.append(gradeTag(trophy.grade));
-  if (trophy.missable) grades.append(el('span', 'tag missable', 'Missable — story moment'));
-  grades.append(el('span', 'tag', `Roadmap stage ${trophy.stage}`));
+  pane.append(makeEl('h2', null, hidden ? 'Hidden story trophy' : trophy.name));
+  const grades = makeEl('div', 'detail-grade');
+  grades.append(gradePill(trophy.grade));
+  if (trophy.missable) grades.append(makeEl('span', 'tag missable', 'Missable — story moment'));
+  grades.append(makeEl('span', 'tag', `Roadmap stage ${trophy.stage}`));
   pane.append(grades);
-  pane.append(el('p', 'detail-desc', hidden ? 'Spoiler-free mode hides this story trophy until you earn it.' : trophy.description));
-  pane.append(el('h3', null, 'Guide'));
-  pane.append(el('p', null, hidden ? 'Earn this story trophy to reveal its guide.' : trophy.guide));
+  pane.append(makeEl('p', 'detail-desc', hidden ? 'Spoiler-free mode hides this story trophy until you earn it.' : trophy.description));
+  pane.append(makeEl('h3', null, 'Guide'));
+  pane.append(makeEl('p', null, hidden ? 'Earn this story trophy to reveal its guide.' : trophy.guide));
   if (!hidden) {
-    pane.append(el('h3', null, 'Sources'));
-    const list = el('ul', 'source-list');
+    pane.append(makeEl('h3', null, 'Sources'));
+    const list = makeEl('ul', 'source-list');
     for (const key of trophy.sources || []) {
       const src = data.sources[key];
       if (!src) continue;
-      const item = el('li');
+      const item = makeEl('li');
       const link = document.createElement('a');
       link.href = src.url;
       link.target = '_blank';
@@ -142,17 +151,17 @@ export function renderGuidePane(pane, trophy, data, ctx) {
       item.append(link, document.createTextNode(' — name, description, grade and PSN count.'));
       list.append(item);
     }
-    const own = el('li');
+    const own = makeEl('li');
     own.textContent = 'Guide advice: our own reading of the official description, not yet checked in the game.';
     list.append(own);
     pane.append(list);
-    pane.append(el('h3', null, 'Steps'));
-    const steps = el('ol', 'detail-steps');
-    for (const step of trophy.steps) steps.append(el('li', null, step));
+    pane.append(makeEl('h3', null, 'Steps'));
+    const steps = makeEl('ol', 'detail-steps');
+    for (const step of trophy.steps) steps.append(makeEl('li', null, step));
     pane.append(steps);
-    pane.append(el('p', 'detail-meta', `Difficulty ${trophy.difficulty}/5 · ${trophy.time} · Difficulty and time are our estimates, not official figures.`));
+    pane.append(makeEl('p', 'detail-meta', `Difficulty ${trophy.difficulty}/5 · ${trophy.time} · Difficulty and time are our estimates, not official figures.`));
     if (trophy.target) {
-      const box = el('div', 'counter-box');
+      const box = makeEl('div', 'counter-box');
       box.append(document.createTextNode(`Your progress: `));
       const input = document.createElement('input');
       input.type = 'number';
@@ -164,7 +173,7 @@ export function renderGuidePane(pane, trophy, data, ctx) {
       box.append(input, document.createTextNode(` / ${trophy.target.toLocaleString('en-US')} ${trophy.targetLabel || ''}`.trim()));
       pane.append(box);
     }
-    pane.append(el('h3', null, 'Your notes'));
+    pane.append(makeEl('h3', null, 'Your notes'));
     const notes = document.createElement('textarea');
     notes.className = 'note-box';
     notes.placeholder = 'Where did you find it? What worked?';
@@ -174,29 +183,41 @@ export function renderGuidePane(pane, trophy, data, ctx) {
   }
 }
 
+function barRow(label, earned, total) {
+  const row = makeEl('div', 'stage-bar-row');
+  row.append(makeEl('span', null, label));
+  const bar = makeEl('div', 'stage-bar');
+  const fill = makeEl('div');
+  fill.style.width = `${total ? Math.round((earned / total) * 100) : 0}%`;
+  bar.append(fill);
+  row.append(bar);
+  row.append(makeEl('span', null, `${earned}/${total}`));
+  return row;
+}
+
 export function renderRoadmap(listEl, barsEl, roadmap, trophies, earnedSet) {
   listEl.replaceChildren();
   for (const stage of roadmap) {
     const members = trophies.filter((t) => t.stage === stage.stage);
     const earned = members.filter((t) => earnedSet.has(t.name)).length;
-    const li = el('li');
-    li.append(el('h3', null, stage.title));
-    li.append(el('p', null, stage.body));
-    li.append(el('p', 'stage-count', `${earned}/${members.length} earned in this stage`));
+    const li = makeEl('li');
+    li.append(makeEl('h3', null, stage.title));
+    li.append(makeEl('p', null, stage.body));
+    li.append(makeEl('p', 'stage-count', `${earned}/${members.length} earned in this stage`));
     listEl.append(li);
   }
   barsEl.replaceChildren();
   for (const stage of roadmap) {
     const members = trophies.filter((t) => t.stage === stage.stage);
     const earned = members.filter((t) => earnedSet.has(t.name)).length;
-    barsEl.append(stageBarRow(stage.title, earned, members.length));
+    barsEl.append(barRow(stage.title, earned, members.length));
   }
 }
 
 export function renderMissables(listEl, trophies, ctx) {
   listEl.replaceChildren();
   const missable = trophies.filter((t) => t.missable);
-  for (const t of missable) listEl.append(trophyRow(t, ctx));
+  for (const t of missable) listEl.append(trophyRowEl(t, ctx));
 }
 
 export function renderPlanner(listEl, barsEl, trophies, earnedSet, ctx) {
@@ -208,7 +229,7 @@ export function renderPlanner(listEl, barsEl, trophies, earnedSet, ctx) {
     .filter((t) => !spoilerHides(t, ctx.spoilerOn, earnedSet))
     .sort((a, b) => a.stage - b.stage || a.difficulty - b.difficulty || a.id - b.id)
     .slice(0, 8);
-  for (const t of next) listEl.append(trophyRow(t, ctx));
+  for (const t of next) listEl.append(trophyRowEl(t, ctx));
   barsEl.replaceChildren();
   const kinds = [
     ['Story', (t) => t.kind === 'story'],
@@ -221,20 +242,8 @@ export function renderPlanner(listEl, barsEl, trophies, earnedSet, ctx) {
   for (const [label, test] of kinds) {
     const members = trophies.filter(test);
     const earned = members.filter((t) => earnedSet.has(t.name)).length;
-    barsEl.append(stageBarRow(label, earned, members.length));
+    barsEl.append(barRow(label, earned, members.length));
   }
-}
-
-function stageBarRow(label, earned, total) {
-  const row = el('div', 'stage-bar-row');
-  row.append(el('span', null, label));
-  const bar = el('div', 'stage-bar');
-  const fill = el('div');
-  fill.style.width = `${total ? Math.round((earned / total) * 100) : 0}%`;
-  bar.append(fill);
-  row.append(bar);
-  row.append(el('span', null, `${earned}/${total}`));
-  return row;
 }
 
 export function renderSourcesNote(noteEl, sources) {

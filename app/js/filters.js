@@ -1,4 +1,9 @@
 // Leonida Platinum — filters: kind, grade, search, spoiler and hide-earned.
+//
+// Kinds are the chips in the toolbar. A trophy's `kind` is its main group and
+// `kinds` lists every group it belongs to; the missable chip reads the flag
+// directly, and the online chip is empty by design — the official list of 55
+// has no trophy that needs online play.
 export const KIND_LABELS = {
   all: 'All 55',
   story: 'Story',
@@ -20,8 +25,8 @@ export function trophyMatches(trophy, filters, earnedSet) {
   if (filters.grade !== 'all' && trophy.grade !== filters.grade) return false;
   if (filters.hideEarned && earnedSet.has(trophy.name)) return false;
   if (filters.query) {
-    const hay = `${trophy.name} ${trophy.description} ${trophy.guide}`.toLowerCase();
-    if (!hay.includes(filters.query.toLowerCase())) return false;
+    const haystack = `${trophy.name} ${trophy.description} ${trophy.guide}`.toLowerCase();
+    if (!haystack.includes(filters.query.toLowerCase())) return false;
   }
   return true;
 }

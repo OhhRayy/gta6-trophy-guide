@@ -1,4 +1,7 @@
 <!doctype html>
+<!-- Leonida Platinum — GTA VI trophy guide & tracker. Static page: the only
+     files it loads are style.css, the four modules under js/ and
+     data/trophies.json, all from its own folder. No network requests. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -18,10 +21,10 @@
       <p class="progress-text" id="progressText">0 of 55 earned</p>
     </div>
     <nav class="tabs" aria-label="Guide sections">
-      <button type="button" data-view="checklist" class="tab active">Checklist</button>
-      <button type="button" data-view="roadmap" class="tab">Roadmap</button>
-      <button type="button" data-view="missables" class="tab">Missables</button>
-      <button type="button" data-view="planner" class="tab">Next up</button>
+      <button class="tab active" type="button" data-view="checklist">Checklist</button>
+      <button class="tab" type="button" data-view="roadmap">Roadmap</button>
+      <button class="tab" type="button" data-view="missables">Missables</button>
+      <button class="tab" type="button" data-view="planner">Next up</button>
     </nav>
   </div>
 </header>
@@ -31,12 +34,12 @@
     <div class="toolbar">
       <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or word…" autocomplete="off"></label>
       <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
-        <button type="button" data-kind="all" class="chip active">All 55</button>
-        <button type="button" data-kind="story" class="chip">Story</button>
-        <button type="button" data-kind="missable" class="chip">Missable</button>
-        <button type="button" data-kind="collectible" class="chip">Collectibles</button>
-        <button type="button" data-kind="activity" class="chip">Activities</button>
-        <button type="button" data-kind="online" class="chip">Online</button>
+        <button class="chip active" type="button" data-kind="all">All 55</button>
+        <button class="chip" type="button" data-kind="story">Story</button>
+        <button class="chip" type="button" data-kind="missable">Missable</button>
+        <button class="chip" type="button" data-kind="collectible">Collectibles</button>
+        <button class="chip" type="button" data-kind="activity">Activities</button>
+        <button class="chip" type="button" data-kind="online">Online</button>
       </div>
       <label class="grade-label">Grade
         <select id="grade">
