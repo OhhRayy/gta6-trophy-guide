@@ -1,5 +1,6 @@
 /* Leonida Platinum — paper theme with a coral accent, an original look.
-   No external fonts or images: every colour below is our own. */
+   No external fonts or images: every colour below is our own. Tags: coral for
+   the one missable trophy, violet for the 28 hidden on PSN. */
 :root {
   --paper: #f6f3ee;
   --card: #ffffff;
@@ -91,6 +92,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 20px 8px; }
   background: var(--paper); border: 1px solid var(--line); color: var(--muted);
 }
 .tag.missable { background: #fdeeda; border-color: #e8b25a; color: #7a4d06; font-weight: 700; }
+.tag.hidden { background: #e8e4f3; border-color: #9a8fc0; color: #4a3f7a; font-weight: 700; }
 .tag.grade-platinum { background: #e2eef0; color: var(--platinum); font-weight: 700; }
 .tag.grade-gold { background: #f7ecd0; color: var(--gold); font-weight: 700; }
 .tag.grade-silver { background: #e8edf0; color: var(--silver); font-weight: 700; }

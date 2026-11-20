@@ -16,18 +16,46 @@ Grand Theft Auto VI, built for the
   [Exophase list](https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/)
   and the
   [PSNProfiles list](https://psnprofiles.com/trophies/43531-grand-theft-auto-vi)
-  on 19 November 2026 — the two lists agree on every name, description and grade.
-- **A guide for each trophy in our own words**, with its sources named beside it.
-  Where an official description names no place, person or method, the guide says
-  so plainly instead of inventing one.
+  on 20 November 2026 — the two lists agree on every name, description and grade.
+- **A guide for each trophy in our own words**, with its method taken from the
+  [PowerPyx trophy guide & roadmap](https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/)
+  and named beside it, source by source. Where no method is verified yet
+  (Bad Luck, I Guess), the guide says so plainly instead of inventing one.
 - **A tracker:** tick trophies off, track PSN counters (42 Shooting Range golds,
   100 WAiNK spots, 52 areas…), write your own notes. Progress saves in the
   browser (localStorage) and can be exported to a file and imported back.
-- **Filters** by kind (story, missable, collectibles, activities, online), grade
-  and search, plus a **spoiler setting** that hides story trophies until earned.
-- **A roadmap to the platinum** in five stages, and **20 missable trophies
-  flagged** — built from the official descriptions alone.
-- **A "Next up" planner** that puts your easiest unearned trophies first.
+- **Filters** by kind (story, missable, hidden, collectibles, activities, online),
+  grade and search, plus a **spoiler setting** that hides story trophies until earned.
+- **A roadmap to the platinum** in five stages, and a **"Next up" planner** that
+  puts your easiest unearned trophies first.
+
+## The three numbers that matter
+
+- **1 missable trophy.** Only Positive Mental Attitude can be missed: its first
+  meditation happens once, in Chapter 1, on the balcony of Jason's house the
+  morning after the mission Down to Earth — Lucia walks out, you follow and
+  accept, and after Chapter 1 that moment is gone for good. It is still
+  unconfirmed whether the trophy needs it, so do it while you can. All 12 story
+  trophies unlock automatically, and every stranger and partner quest giver
+  returns after the story. Corroborated by
+  [KeenGamer](https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/).
+- **28 hidden on PSN.** Twenty-eight of the 55 stay hidden until earned — the
+  12 story trophies plus 16 side and one-off feats — and the guide tags each one
+  in its row, its detail pane and the header count, with a Hidden filter chip.
+  The split follows
+  [HowToVideoGame](https://howtovideogame.com/gta-6-trophies/).
+- **About 200 hours.** PowerPyx puts the platinum at roughly 200 hours,
+  difficulty 4/10, one playthrough, no online trophies, no glitched trophies.
+  The story takes 60–80 hours; the rest is the 100% completion checklist and
+  cleanup. Cheats switch trophies and saving off, so leave them alone.
+
+## No mission replay — save by hand
+
+GTA VI has **no mission replay** and free-roam stays open after the story, so
+the guide's safety net is manual saves: **15 manual slots plus 1 autosave**.
+Keep one at the start and one at the end of each chapter (10 saves), then rotate
+the remaining 5 for free-roam cleanup. That is the only backup for the Chapter 1
+meditation — there is no way back to it once Chapter 1 ends.
 
 ## Run it
 

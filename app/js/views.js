@@ -21,6 +21,17 @@ function gradeTag(grade) {
   return el('span', `tag grade-${grade}`, gradeLabel(grade));
 }
 
+// What each source is cited for, beside a trophy's guide: the official lists
+// carry the name, description, grade and PSN count; PowerPyx carries the
+// method; KeenGamer backs the one missable trophy; HowToVideoGame carries the
+// hidden split.
+function sourceNoteFor(key) {
+  if (key === 'powerpyx') return 'method and roadmap.';
+  if (key === 'keengamer') return 'missable check and save advice.';
+  if (key === 'howtovideogame') return 'hidden split (27 visible / 28 hidden).';
+  return 'name, description, grade and PSN count.';
+}
+
 export function renderHeaderCounts(countsEl, fillEl, textEl, trophies, earnedSet) {
   const total = trophies.length;
   const earned = earnedSet.size;
@@ -43,6 +54,12 @@ export function renderHeaderCounts(countsEl, fillEl, textEl, trophies, earnedSet
   const mb = el('b', null, `${missableEarned}/${missableTotal}`);
   missChip.append(mb, document.createTextNode(' missable watched'));
   countsEl.append(missChip);
+  const hiddenTotal = trophies.filter((t) => t.hidden).length;
+  const hiddenEarned = trophies.filter((t) => t.hidden && earnedSet.has(t.name)).length;
+  const hidChip = el('span', 'count-chip');
+  const hb = el('b', null, `${hiddenEarned}/${hiddenTotal}`);
+  hidChip.append(hb, document.createTextNode(' hidden on PSN'));
+  countsEl.append(hidChip);
   fillEl.style.width = `${total ? Math.round((earned / total) * 100) : 0}%`;
   textEl.textContent = `${earned} of ${total} earned — ${total ? Math.round((earned / total) * 100) : 0}% to platinum`;
 }
@@ -77,7 +94,8 @@ function trophyRow(trophy, ctx) {
   }
   const tags = el('div', 'trophy-tags');
   tags.append(gradeTag(trophy.grade));
-  if (trophy.missable) tags.append(el('span', 'tag missable', 'Missable — story moment'));
+  if (trophy.missable) tags.append(el('span', 'tag missable', 'Missable — do it in Chapter 1'));
+  if (trophy.hidden) tags.append(el('span', 'tag hidden', 'Hidden'));
   appendKindTags(tags, trophy);
   if (trophy.target) tags.append(el('span', 'tag', `PSN target: ${trophy.target.toLocaleString('en-US')} ${trophy.targetLabel || ''}`.trim()));
   body.append(tags);
@@ -130,13 +148,18 @@ export function renderGuidePane(pane, trophy, data, ctx) {
   pane.append(el('h2', null, hidden ? 'Hidden story trophy' : trophy.name));
   const grades = el('div', 'detail-grade');
   grades.append(gradeTag(trophy.grade));
-  if (trophy.missable) grades.append(el('span', 'tag missable', 'Missable — story moment'));
+  if (trophy.missable) grades.append(el('span', 'tag missable', 'Missable — do it in Chapter 1'));
+  if (trophy.hidden) grades.append(el('span', 'tag hidden', 'Hidden on PSN'));
   grades.append(el('span', 'tag', `Roadmap stage ${trophy.stage}`));
   pane.append(grades);
   pane.append(el('p', 'detail-desc', hidden ? 'Spoiler-free mode hides this story trophy until you earn it.' : trophy.description));
   pane.append(el('h3', null, 'Guide'));
   pane.append(el('p', null, hidden ? 'Earn this story trophy to reveal its guide.' : trophy.guide));
   if (!hidden) {
+    pane.append(el('h3', null, 'Steps'));
+    const steps = el('ol', 'detail-steps');
+    for (const step of trophy.steps) steps.append(el('li', null, step));
+    pane.append(steps);
     pane.append(el('h3', null, 'Sources'));
     const list = el('ul', 'source-list');
     for (const key of trophy.sources || []) {
@@ -148,18 +171,14 @@ export function renderGuidePane(pane, trophy, data, ctx) {
       link.target = '_blank';
       link.rel = 'noopener';
       link.textContent = src.name;
-      item.append(link, document.createTextNode(' — name, description, grade and PSN count.'));
+      item.append(link, document.createTextNode(` — ${sourceNoteFor(key)}`));
       list.append(item);
     }
     const own = el('li');
-    own.textContent = 'Guide advice: our own reading of the official description, not yet checked in the game.';
+    own.textContent = 'Guide text: written in our own words from the sources above — a source is cited, never copied.';
     list.append(own);
     pane.append(list);
-    pane.append(el('h3', null, 'Steps'));
-    const steps = el('ol', 'detail-steps');
-    for (const step of trophy.steps) steps.append(el('li', null, step));
-    pane.append(steps);
-    pane.append(el('p', 'detail-meta', `Difficulty ${trophy.difficulty}/5 · ${trophy.time} · Difficulty and time are our estimates, not official figures.`));
+    pane.append(el('p', 'detail-meta', `Difficulty ${trophy.difficulty}/5 · ${trophy.time} · Difficulty and time are our estimates unless a source is named.`));
     if (trophy.target) {
       const box = el('div', 'counter-box');
       box.append(document.createTextNode(`Your progress: `));
@@ -257,7 +276,7 @@ export function renderSourcesNote(noteEl, sources) {
     link.rel = 'noopener';
     link.textContent = sources[key].name;
     noteEl.append(link);
-    if (i < keys.length - 1) noteEl.append(document.createTextNode(' and '));
+    if (i < keys.length - 1) noteEl.append(document.createTextNode(', '));
   });
-  noteEl.append(document.createTextNode(' (checked 19 November 2026; the two agree on every name, description and grade).'));
+  noteEl.append(document.createTextNode(' (names, descriptions and grades checked 20 November 2026; methods from PowerPyx, missable check from KeenGamer, hidden split from HowToVideoGame).'));
 }

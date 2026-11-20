@@ -1,10 +1,12 @@
 // Leonida Platinum — boot: load the trophy data, wire the toolbar, tabs and detail pane.
+// The guide opens on Positive Mental Attitude (id 28), the one missable trophy:
+// a reader who lands on the cover sees the Chapter 1 warning first, not a random row.
 import { loadSavedProgress, saveProgress, toggleEarned, setCounter, setNote, exportProgressFile, parseImportedProgress, freshProgress } from './store.js';
 import { visibleTrophies } from './filters.js';
 import { renderHeaderCounts, renderChecklist, renderGuidePane, renderRoadmap, renderMissables, renderPlanner, renderSourcesNote } from './views.js';
 
 const DATA_URL = 'data/trophies.json';
-const DEFAULT_SELECTED_ID = 17; // The Shootist: a silver with a PSN count, a full guide and sources.
+const DEFAULT_SELECTED_ID = 28; // Positive Mental Attitude: the one missable trophy — its guide opens first.
 
 const progress = loadSavedProgress();
 const activeFilters = { kind: 'all', grade: 'all', query: '' };

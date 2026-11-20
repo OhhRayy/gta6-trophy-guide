@@ -1,13 +1,15 @@
 // Leonida Platinum — filters: kind, grade, search, spoiler and hide-earned.
 //
 // Kinds are the chips in the toolbar. A trophy's `kind` is its main group and
-// `kinds` lists every group it belongs to; the missable chip reads the flag
-// directly, and the online chip is empty by design — the official list of 55
-// has no trophy that needs online play.
+// `kinds` lists every group it belongs to; the missable and hidden chips read
+// their flags directly, and the online chip is empty by design — the official
+// list of 55 has no trophy that needs online play. 28 of the 55 are hidden on
+// PSN until earned, so the hidden chip is a real filter, not a curiosity.
 export const KIND_LABELS = {
   all: 'All 55',
   story: 'Story',
   missable: 'Missable',
+  hidden: 'Hidden',
   collectible: 'Collectibles',
   activity: 'Activities',
   online: 'Online',
@@ -16,6 +18,7 @@ export const KIND_LABELS = {
 export function kindMatches(trophy, kind) {
   if (kind === 'all') return true;
   if (kind === 'missable') return trophy.missable === true;
+  if (kind === 'hidden') return trophy.hidden === true;
   if (kind === 'online') return false; // The official list has no online trophies.
   return Array.isArray(trophy.kinds) && trophy.kinds.includes(kind);
 }
